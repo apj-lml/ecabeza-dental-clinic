@@ -82,10 +82,7 @@ body{font-family:'Work Sans',sans-serif;color:#3D2C2A;background:#FFF9F5;overflo
 .testimonial-stars{display:flex;gap:2px;color:#E8A87C;font-size:1rem;margin-bottom:1rem}
 .testimonial-avatar{border-radius:50%;width:48px;height:48px;object-fit:cover;border:2px solid rgba(201,123,93,0.15)}
 
-@media(max-width:768px){
-  .testimonials-split{grid-template-columns:1fr;gap:2rem}
-  .testimonials-card-container{min-height:340px}
-}
+
 
 /* ========== FAQ ACCORDION ========== */
 .faq-item{border-radius:16px;cursor:pointer;overflow:hidden;transition:all 300ms ease;border:1px solid var(--card-border);background:#FFF}
@@ -133,17 +130,22 @@ h2{font-family:'Nunito',sans-serif;font-weight:800;font-size:2rem;color:#3D2C2A;
 
 /* ========== RESPONSIVE ========== */
 @media(max-width:768px){
+  body{padding-bottom:72px}
   .split{grid-template-columns:1fr;gap:2rem}
   h2{font-size:1.5rem}
   .float-bar{display:flex;gap:0.5rem}
   .hero-stats{flex-direction:column;gap:0.75rem;align-items:flex-start}
+  .booking-grid{grid-template-columns:1fr!important}
+  .testimonials-split{grid-template-columns:1fr;gap:2rem}
+  .testimonials-card-container{min-height:340px}
 }
 @media(max-width:480px){
   h1{font-size:1.75rem!important}
   h2{font-size:1.35rem}
   .section-pad{padding:3rem 0}
   .container{padding:0 1rem}
-  }
+  nav{padding-left:1rem!important;padding-right:1rem!important}
+}
 @media(max-width:400px){
   .nav-link{display:none}
   .btn{font-size:0.85rem;padding:0.7rem 1.25rem}
@@ -162,10 +164,10 @@ h2{font-family:'Nunito',sans-serif;font-weight:800;font-size:2rem;color:#3D2C2A;
   "@context":"https://schema.org",
   "@type":"Dentist",
   "name":"Ecabeza Dental Clinic",
-  "description":"Dental care while you shop at Urdaneta New Public Market. Budget-friendly dentistry. Walk-ins welcome.",
+  "description":"Dental care while you shop at Urdaneta New Public Market. Budget-friendly dentistry. Walk-ins welcome Mon-Sat. Sundays by appointment only.",
   "address":{"@type":"PostalAddress","streetAddress":"Stall No. 32, Urdaneta New Public Market","addressLocality":"Urdaneta City","addressRegion":"Pangasinan","postalCode":"2428","addressCountry":"PH"},
   "telephone":"+639983771828",
-  "openingHours":"Mo-Sa 08:00-17:00",
+  "openingHours":["Mo-Sa 08:00-17:00","Su 08:00-17:00"],
   "priceRange":"PHP",
   "url":"https://apj-lml.github.io/ecabeza-dental-clinic/"
 }
@@ -223,7 +225,7 @@ h2{font-family:'Nunito',sans-serif;font-weight:800;font-size:2rem;color:#3D2C2A;
         </div>
 
         <!-- Title -->
-        <h1 id="hero-heading" class="hero-anim-in" style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2.5rem,6vw,5rem);line-height:1.05;letter-spacing:-0.03em;color:#1A1A1A;margin-bottom:1.5rem">Dental care <em style="color:#C97B5D;font-style:normal">while</em> you shop.</h1>
+        <h1 id="hero-heading" class="hero-anim-in" style="font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(2.5rem,6vw,5rem);line-height:1.05;letter-spacing:-0.03em;color:#1A1A1A;margin-bottom:1.5rem">Dental care <em style="color:#C97B5D;font-style:normal">you</em> deserve.</h1>
 
         <!-- Description -->
         <p class="body-text hero-anim-in" style="font-size:1.2rem;color:#666;line-height:1.6;max-width:650px;margin-bottom:3rem">Right at Stall 32 in the Urdaneta Public Market. Budget-friendly dentistry, no appointment needed. Drop by on your next market day.</p>
@@ -239,8 +241,8 @@ h2{font-family:'Nunito',sans-serif;font-weight:800;font-size:2rem;color:#3D2C2A;
           <div style="position:relative">
             <div style="position:absolute;top:0;left:0;width:2rem;height:3px;background:#C97B5D;border-radius:2px;margin-bottom:0.5rem"></div>
             <div style="padding-top:0.75rem">
-              <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:2rem;color:#1A1A1A;line-height:1">8AM-5PM</div>
-              <div style="font-family:'Nunito',sans-serif;font-weight:600;font-size:0.8rem;color:#888;text-transform:uppercase;letter-spacing:0.04em;margin-top:0.35rem">Mon to Saturday</div>
+              <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:2rem;color:#1A1A1A;line-height:1">Mon-Sat 8-5</div>
+              <div style="font-family:'Nunito',sans-serif;font-weight:600;font-size:0.8rem;color:#888;text-transform:uppercase;letter-spacing:0.04em;margin-top:0.35rem">Sun by Appointment</div>
             </div>
           </div>
           <div style="position:relative">
@@ -479,7 +481,7 @@ h2{font-family:'Nunito',sans-serif;font-weight:800;font-size:2rem;color:#3D2C2A;
     <div style="text-align:center;max-width:650px;margin:0 auto 3rem">
       <div class="reveal"><span class="section-label">Find Us</span></div>
       <div class="reveal"><h2 style="margin:0.5rem 0">Stall 32. Right inside the market.</h2></div>
-      <div class="reveal"><p class="body-text">Urdaneta New Public Market. Look for Stall 32. You can't miss it — it's on the main corridor. Open Monday to Saturday, 8 AM to 5 PM.</p></div>
+      <div class="reveal"><p class="body-text">Urdaneta New Public Market. Look for Stall 32. You can't miss it — it's on the main corridor. Open Monday to Saturday, 8 AM to 5 PM. Sundays by appointment only.</p></div>
     </div>
     <div class="reveal" style="border-radius:20px;overflow:hidden;border:1px solid rgba(201,123,93,0.15)">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3831.123456789!2d120.567!3d15.976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDU4JzMzLjYiTiAxMjDCsDM0JzAxLjIiRQ!5e0!3m2!1sen!2sph!4v1680000000000" width="100%" height="350" style="border:0;display:block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ecabeza Dental Clinic location at Urdaneta New Public Market"></iframe>
@@ -556,7 +558,7 @@ h2{font-family:'Nunito',sans-serif;font-weight:800;font-size:2rem;color:#3D2C2A;
       </div>
       <div class="faq-item reveal">
         <button class="faq-trigger" onclick="this.closest('.faq-item').classList.toggle('open')" aria-expanded="false">Anong oras kayo bukas?<span class="faq-chevron">▼</span></button>
-        <div class="faq-body"><div class="faq-content">Monday to Saturday, 8:00 AM to 5:00 PM. Bukas kami kahit araw ng palengke. Sarado tuwing Linggo.</div></div>
+        <div class="faq-body"><div class="faq-content">Monday to Saturday, 8:00 AM to 5:00 PM — walk-ins welcome. Sundays by appointment only — message us on Facebook or call to schedule.</div></div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-trigger" onclick="this.closest('.faq-item').classList.toggle('open')" aria-expanded="false">May discount ba for senior citizens?<span class="faq-chevron">▼</span></button>
@@ -589,7 +591,7 @@ h2{font-family:'Nunito',sans-serif;font-weight:800;font-size:2rem;color:#3D2C2A;
   <div class="container">
     <div style="font-family:'Nunito',sans-serif;font-weight:700;font-size:1rem;color:#FFF;margin-bottom:0.5rem">Ecabeza Dental Clinic</div>
     <p style="font-family:'Work Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.6);margin-bottom:0.25rem">Stall No. 32, Urdaneta New Public Market, Urdaneta City, Pangasinan</p>
-    <p style="font-family:'Work Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.6)">Mon–Sat 8 AM–5 PM | <a href="tel:09983771828" style="color:rgba(255,255,255,0.6);text-decoration:none">0998 377 1828</a></p>
+    <p style="font-family:'Work Sans',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.6)">Mon–Sat 8AM–5PM | Sun by appt | <a href="tel:09983771828" style="color:rgba(255,255,255,0.6);text-decoration:none">0998 377 1828</a></p>
   </div>
 </footer>
 
