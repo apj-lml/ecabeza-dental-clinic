@@ -73,7 +73,7 @@ body{font-family:'Work Sans',sans-serif;color:#3D2C2A;background:#FFF9F5;overflo
 
 /* ========== ANIMATED TESTIMONIALS ========== */
 .testimonials-split{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
-.testimonials-card-container{position:relative;min-height:380px}
+.testimonials-card-container{position:relative;min-height:380px;overflow:hidden}
 .testimonials-card{position:absolute;inset:0;background:#FFF;border:1px solid rgba(201,123,93,0.12);box-shadow:0 4px 24px rgba(201,123,93,0.06);border-radius:20px;padding:2rem;display:flex;flex-direction:column;transition:opacity 0.5s ease,transform 0.5s ease;opacity:0;transform:translateX(40px) scale(0.95);pointer-events:none}
 .testimonials-card.active{opacity:1;transform:translateX(0) scale(1);pointer-events:auto;z-index:10}
 .testimonials-card-quote{position:absolute;top:1.5rem;left:1.5rem;opacity:0.08;font-size:3rem;font-family:'Nunito',sans-serif;font-weight:900;color:#C97B5D;line-height:1;pointer-events:none}
